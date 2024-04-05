@@ -5,14 +5,21 @@ import Desc from "../components/Desc";
 import Button from "../components/Button";
 import { AiFillStar } from "react-icons/ai";
 import ProgressBar from "../components/ProgressBar"
+import {useNavigate} from "react-router-dom"
 const OnTheWay = () => {
   const [wid, setWid] = useState("w-0");
+  const navigate=useNavigate();
   useEffect(() => {
     const carrers = JSON.parse(localStorage.getItem("carrers") || null);
     const interest = JSON.parse(localStorage.getItem("interest") || null);
     const rightplace = JSON.parse(localStorage.getItem("rightplace") || null);
     const comfort = JSON.parse(localStorage.getItem("comfort") || null);
     const ontheway = JSON.parse(localStorage.getItem("ontheway") || null);
+    if(!comfort)
+    {
+      window.alert("please enter you math comfort level first!")
+      navigate("/ComfortLevel");
+    }
     if (carrers) {
       setWid("w-1/5");
     }

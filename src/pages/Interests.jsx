@@ -5,7 +5,9 @@ import { Interestsdata } from "../Data/InterstsData";
 import InterestsBox from "../components/InterestsBox";
 import Button from "../components/Button";
 import ProgressBar from "../components/ProgressBar";
+import {useNavigate} from "react-router-dom"
 const Interests = () => {
+  const navigate=useNavigate();
   const [selectinterest, setSelectInterest] = useState("");
   const [wid, setWid] = useState("w-0");
   const handleClick = (title) => {
@@ -18,6 +20,11 @@ const Interests = () => {
     const rightplace = JSON.parse(localStorage.getItem("rightplace") || null);
     const comfort = JSON.parse(localStorage.getItem("comfort") || null);
     const ontheway = JSON.parse(localStorage.getItem("ontheway") || null);
+    if(!carrers)
+    {
+      window.alert("please enter you carrer first!")
+      navigate("/");
+    }
     if (carrers) {
       setWid("w-1/5");
     }
