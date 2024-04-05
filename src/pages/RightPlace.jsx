@@ -36,7 +36,7 @@ const RightPlace = () => {
           <img src={RightPlaceImage} alt="image1" />
         </div>
         <div className="flex flex-col justify-center items-center w-full md:w-1/2">
-          <div>
+          <div className="text-3xl md:text-5xl p-10 text-center">
             <Heading title={"You are in Right place"} />
           </div>
           <div className="w-1/2">

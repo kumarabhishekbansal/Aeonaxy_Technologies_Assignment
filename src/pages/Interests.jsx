@@ -4,7 +4,7 @@ import Desc from "../components/Desc";
 import { Interestsdata } from "../Data/InterstsData";
 import InterestsBox from "../components/InterestsBox";
 import Button from "../components/Button";
-import ProgressBar from "../components/ProgressBar"
+import ProgressBar from "../components/ProgressBar";
 const Interests = () => {
   const [selectinterest, setSelectInterest] = useState("");
   const [wid, setWid] = useState("w-0");
@@ -37,12 +37,18 @@ const Interests = () => {
   return (
     <section className="h-3/5 flex-col items-center justify-center text-center gap-y-4">
       <ProgressBar pbar={wid} />
-      <Heading title={"Which are you most interested in?"} />
-      <Desc
-        title={
-          "Choose just one.This will help us get you started(but won't limit your experience)."
-        }
-      />
+      <div className="text-3xl md:text-4xl text-center mt-10 p-10">
+        <Heading title={"Which are you most interested in?"} />
+      </div>
+
+      <div>
+        <Desc
+          title={
+            "Choose just one.This will help us get you started(but won't limit your experience)."
+          }
+        />
+      </div>
+
       {Interestsdata.length > 0 ? (
         <>
           {Interestsdata.map((val) => {

@@ -37,9 +37,9 @@ const OnTheWay = () => {
           <img src={onTheWay} alt="image1" />
         </div>
         <div className="flex flex-col justify-center items-center w-full md:w-1/2">
-          <div className="text-xl text-left">
+          <div className="text-4xl md:text-5xl p-10 text-center flex flex-col justify-center items-center">
             <Heading title={"You are on the way !!"} />
-            <div className="flex text-xl">
+            <div className="flex text-3xl mt-10">
               <AiFillStar style={{ color: "yellow" }} />
               <AiFillStar style={{ color: "yellow" }} />
               <AiFillStar style={{ color: "yellow" }} />

@@ -13,7 +13,7 @@ const LearningBox = ({ title, desc, image, popular }) => {
       <div>
         <img src={image} alt={title} />
       </div>
-      <div>
+      <div className="w-full lg:w-1/4">
         {popular === true ? (
           <h3 className="border-4 border-yellow-600 p-2 rounded-lg text-white bg-orange-400">Popular</h3>
         ) : (

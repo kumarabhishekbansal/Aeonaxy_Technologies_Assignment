@@ -1,10 +1,10 @@
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Heading from "../components/Heading";
 import Desc from "../components/Desc";
 import { MathsData } from "../Data/MathsData";
 import ComfortBox from "../components/ComfortBox";
 import Button from "../components/Button";
-import ProgressBar from "../components/ProgressBar"
+import ProgressBar from "../components/ProgressBar";
 const ComfortLevel = () => {
   const [selectcomfort, setSelectComfort] = useState("");
   const [wid, setWid] = useState("w-0");
@@ -38,13 +38,22 @@ const ComfortLevel = () => {
   }, [wid]);
   return (
     <section className="h-4/5 flex-col flex justify-center items-center">
+      <div className="w-full">
       <ProgressBar pbar={wid} />
-      <Heading title={"What is your math comfort level?"} />
-      <Desc
-        title={
-          "Choose the highest level you feel confident in - you can always adjust later."
-        }
-      />
+      </div>
+      
+      <div className="text-3xl md:text-4xl mt-10 text-center p-10">
+        <Heading title={"What is your math comfort level?"} />
+      </div>
+
+      <div>
+        <Desc
+          title={
+            "Choose the highest level you feel confident in - you can always adjust later."
+          }
+        />
+      </div>
+
       <div className="flex-col md:flex-row flex justify-evenly gap-4 mt-10">
         {MathsData.length > 0 ? (
           <>
