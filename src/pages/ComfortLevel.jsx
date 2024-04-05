@@ -1,10 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import Heading from "../components/Heading";
 import Desc from "../components/Desc";
 import { MathsData } from "../Data/MathsData";
 import ComfortBox from "../components/ComfortBox";
 import Button from "../components/Button";
 const ComfortLevel = () => {
+  const [selectcomfort, setSelectComfort] = useState("");
+  const handleClick = (title) => {
+    console.log("clicked");
+    console.log(title);
+    setSelectComfort(title);
+    localStorage.setItem("comfort", JSON.stringify(title));
+  };
   return (
     <section className="flex-col flex justify-center items-center">
       <Heading title={"What is your math comfort level?"} />
@@ -19,8 +26,11 @@ const ComfortLevel = () => {
             {MathsData.map((val) => {
               return (
                 <div
-                  className="flex flex-col border-4 justify-center items-center cursor-pointer hover:bg-blue-500"
                   key={val.title}
+                  className={`flex flex-col border-4 justify-center items-center cursor-pointer hover:bg-slate-200 active:bg-slate-500 ${
+                    val.title === selectcomfort ? "bg-sky-400" : ""
+                  }`}
+                  onClick={() => handleClick(`${val.title}`)}
                 >
                   <ComfortBox
                     title={val.title}
@@ -38,9 +48,8 @@ const ComfortLevel = () => {
         )}
       </div>
       <div className="w-full text-center mt-10">
-      <Button />
+        <Button />
       </div>
-      
     </section>
   );
 };
