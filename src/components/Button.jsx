@@ -25,7 +25,7 @@ const Button = () => {
     else if(location.pathname==="/OnTheWay")
     {
       localStorage.setItem("ontheway",JSON.stringify(true))
-      navigate("/LearningPaths");
+      navigate("/loading");
     }
     
   }

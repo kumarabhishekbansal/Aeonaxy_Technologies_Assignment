@@ -3,7 +3,6 @@ import { BrowserRouter as Router,Routes,Route } from "react-router-dom";
 import Carrers from "./pages/Carrers";
 import Interests from "./pages/Interests";
 import RightPlace from "./pages/RightPlace"
-import ProgressBar from "./components/ProgressBar";
 import ComfortLevel from "./pages/ComfortLevel";
 import OnTheWay from "./pages/OnTheWay";
 import Loading from "./pages/Loading";
@@ -11,7 +10,6 @@ import LearningPaths from "./pages/LearningPaths";
 const App = () => {
   return (
     <section className=" overflow-hidden">
-      <ProgressBar />
       <Router>
         <Routes>
           <Route exact path="/" element={<Carrers />} />
@@ -19,6 +17,7 @@ const App = () => {
           <Route exact path="/RightPlace" element={<RightPlace />} />
           <Route exact path="/ComfortLevel" element={<ComfortLevel />} />
           <Route exact path="/OnTheWay" element={<OnTheWay />} />
+          <Route exact path="/loading" element={<Loading />} />
           <Route exact path="/LearningPaths" element={<LearningPaths />} />
         </Routes>
       </Router>

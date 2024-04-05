@@ -1,6 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { FaCircleNotch } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 const Loading = () => {
+  const navigate = useNavigate();
+  useEffect(() => {
+    setTimeout(() => {
+      navigate("/LearningPaths");
+    }, 2000);
+  });
   return (
     <section className="flex flex-col justify-center items-center">
       <div>
