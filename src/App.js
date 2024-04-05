@@ -1,4 +1,5 @@
 import React from "react";
+import { BrowserRouter as Router,Routes,Route } from "react-router-dom";
 import Carrers from "./pages/Carrers";
 import Interests from "./pages/Interests";
 import RightPlace from "./pages/RightPlace"
@@ -11,7 +12,16 @@ const App = () => {
   return (
     <section className=" overflow-hidden">
       <ProgressBar />
-      <LearningPaths />
+      <Router>
+        <Routes>
+          <Route exact path="/" element={<Carrers />} />
+          <Route exact path="/interest" element={<Interests />} />
+          <Route exact path="/RightPlace" element={<RightPlace />} />
+          <Route exact path="/ComfortLevel" element={<ComfortLevel />} />
+          <Route exact path="/OnTheWay" element={<OnTheWay />} />
+          <Route exact path="/LearningPaths" element={<LearningPaths />} />
+        </Routes>
+      </Router>
     </section>
   );
 };
