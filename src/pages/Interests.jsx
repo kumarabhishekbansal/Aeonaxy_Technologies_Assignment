@@ -3,6 +3,7 @@ import Heading from "../components/Heading";
 import Desc from "../components/Desc";
 import { Interestsdata } from "../Data/InterstsData";
 import InterestsBox from "../components/InterestsBox";
+import Button from "../components/Button";
 const Interests = () => {
   return (
     <section className="h-3/5 flex-col items-center justify-center text-center gap-y-4">
@@ -20,6 +21,7 @@ const Interests = () => {
               </div>
             );
           })}
+          <Button />
         </>
       ) : (
         <>
