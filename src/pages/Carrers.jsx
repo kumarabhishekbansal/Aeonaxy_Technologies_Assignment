@@ -3,6 +3,7 @@ import Heading from "../components/Heading";
 import Desc from "../components/Desc";
 import { carrerdata } from "../Data/CarrersData";
 import CarrerBox from "../components/CarrerBox";
+import Button from "../components/Button";
 const Carrers = () => {
   return (
     <section className="h-3/5 flex-col items-center justify-center text-center gap-y-4">
@@ -20,6 +21,7 @@ const Carrers = () => {
               </div>
             );
           })}
+          <Button />
         </>
       ) : (
         <>
