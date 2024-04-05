@@ -6,11 +6,12 @@ import ProgressBar from "./components/ProgressBar";
 import ComfortLevel from "./pages/ComfortLevel";
 import OnTheWay from "./pages/OnTheWay";
 import Loading from "./pages/Loading";
+import LearningPaths from "./pages/LearningPaths";
 const App = () => {
   return (
     <section className=" overflow-hidden">
       <ProgressBar />
-      <Loading />
+      <LearningPaths />
     </section>
   );
 };
